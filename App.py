@@ -23,7 +23,7 @@ set_background()
 files_name = glob.glob('documents/*')
 files_dic = {}
 for item in files_name:
-    files_dic[item.split('\\')[-1]] = item
+    files_dic[item.split('/')[-1]] = item
 
 col1, col2, col3 = st.columns([0.5, 2, 7.5])
 with col2:
