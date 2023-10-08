@@ -20,10 +20,29 @@ def set_background():
 
 set_background()
 
+name_dic = {
+    "youtube.html": "youtube评论文本分析",
+    "modelPred.html": "房价预测",
+    "Store.html": "商店销量预测",
+    "water-bottle-images-classification-cnn-resnet50.html": "图像分类",
+    "ICH.html": "医学二分类",
+    "ICR.html": "ICR二分类",
+    "HouseClean.html": "房源数据清洗",
+    "DBSCAN.html": "船舶航迹聚类",
+    "Korea.html": "韩国房价数据挖掘",
+    "HouseRec.html": "房源推荐模型",
+    "TDM.html": "血糖预测",
+    "DBSCAN_model.html": "船舶航迹预测",
+    "Laying.html": "下蛋率数据挖掘",
+    "FIT5196.html": "房源选择决策研究",
+    "主题分类.html": "B站评论主题分类（需稍加等待加载）",
+    "主题分类_youtube.html": "油管评论主题分类",
+    "DDOS.html": "DDOS攻击分类预测",
+}
 files_name = glob.glob('documents/*')
 files_dic = {}
 for item in files_name:
-    files_dic[item.split('/')[-1]] = item
+    files_dic[name_dic[item.split('/')[-1]]] = item
 
 col1, col2, col3 = st.columns([0.5, 2, 7.5])
 with col2:
